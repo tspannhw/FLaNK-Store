@@ -1,0 +1,25 @@
+{
+ "type": "record",
+ "name": "itemimage",
+ "namespace": "com.cloudera.data",
+ "fields": [
+  {
+   "name": "size",
+   "type": ["string","null"]
+  },
+  {
+   "name": "url",
+   "type": ["string","null"]
+  },
+  {
+   "name": "originstore",
+   "type": ["string","null"]
+  },
+  {
+   "name": "upc",
+   "type": ["string","null"]
+  },
+     { "name" : "uuid", "type" : ["null", "string"]}, 
+{ "name" : "ts", "type" : ["long"], "default": 1, "logicalType": "timestamp-millis"}
+ ]
+}

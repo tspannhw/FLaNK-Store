@@ -1,0 +1,13 @@
+  { "type" : "record", "name" : "pointofsale", 
+"fields" : [ 
+{ "name" : "salesid", "type" : ["null", "string"]}, 
+{ "name" : "first_name", "type" : ["null", "string"]}, 
+{ "name" : "last_name", "type" : ["null", "string"]}, 
+{ "name" : "email", "type" : ["null", "string"]}, 
+{ "name" : "ip_address", "type" : ["null", "string"]}, 
+{ "name" : "department", "type" : ["null", "string"]}, 
+{ "name" : "cost", "type" : ["null", "string"]}, 
+{ "name" : "product", "type" : ["null", "string"]},
+{ "name" : "tx_date", "type" : ["null", "string"]},
+{ "name" : "brand_name", "type" : ["null", "string"]}
+] }

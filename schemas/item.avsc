@@ -2,7 +2,7 @@
  "name":"item",
  "namespace":"dev.datainmotion",
  "fields":[
-   {"name":"date","type":["string","null"]},
+           {"name":"itemdate","type":["string","null"]},
            {"name":"itemdescription","type":["string","null"]},
            {"name":"images","type":["string","null"]},
            {"name":"item","type":["string","null"]},

@@ -27,3 +27,4 @@ from `sr1`.`default_database`.`item`
 
 * https://developer.kroger.com/documentation/api-products/public/products/tutorial
 * https://github.com/tspannhw/retail-dynamic-shelf-pricing
+* https://github.com/tspannhw/FLaNK-AllTheStreams/tree/main/schemas

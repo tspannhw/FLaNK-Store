@@ -1,5 +1,18 @@
 # FLaNK-Store
+
 Retail Grocery Store with MiNiFi, NiFi, Kafka, Flink, Kudu, Iceberg, Visualization
+
+![FLANK](https://github.com/tspannhw/FLaNK-Store/blob/main/images/thefuturenificity4.jpg?raw=true)
+
+
+### We are ingesting data from Kroger
+
+You will need to sign-up to get your credentials to get this cool data.
+
+* https://developer.kroger.com/reference/#operation/productGet
+* https://developer.kroger.com/documentation
+* https://developer.kroger.com/documentation/public/getting-started/quick-start
+* https://developer.kroger.com/documentation/api-products/public/products/overview
 
 
 

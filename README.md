@@ -23,6 +23,7 @@ You will need to sign-up to get your credentials to get this cool data.
 
 ![nifi](https://github.com/tspannhw/FLaNK-Store/blob/main/images/livestoredata.jpg)
 
+We have a few interesting flows for working with Retail data.   The First 
 
 ![nifi](https://github.com/tspannhw/FLaNK-Store/blob/main/images/nififlow1.jpg)
 
@@ -60,7 +61,7 @@ You will need to sign-up to get your credentials to get this cool data.
 ![flink](https://github.com/tspannhw/FLaNK-Store/blob/main/images/flinkjob.jpg)
 
 
-### NiFi Calcite SQL
+### NiFi Calcite SQL - To Transform and Enrich Item Price Stream
 
 ````
 
@@ -72,12 +73,14 @@ FROM FLOWFILE
 
 ````
 
-### Flink SQL
+### Flink SQL to Browse Data
 
-An example of querying Apache Kafka topics with Apache Flink SQL via Schema Registry catalogs.
+An example of querying Apache Kafka topics with Apache Flink SQL via Schema Registry catalog.
 
 ````
-select brandname, item, itemdescription, itemsize, price, category, updatedate, longdescrption, displayimage
+select brandname, item, itemdescription, itemsize, 
+       price, category, 
+       updatedate, longdescrption, displayimage
 from `sr1`.`default_database`.`item`
 
 ````
@@ -92,3 +95,4 @@ from `sr1`.`default_database`.`item`
 * https://github.com/tspannhw/FLaNK-AllTheStreams/tree/main/schemas
 * https://developer.kroger.com/documentation/partner/getting-started/apis
 * https://documenter.getpostman.com/view/4833726/TVReeWJm
+* https://github.com/tspannhw/FLaNK-AllTheStreams

@@ -24,7 +24,6 @@
                        <th valign="left"><b>Price</b></th>
                        <th valign="left"><b>Category</b></th>
                        <th valign="left"><b>Update Date</b></th>
-                       <th valign="left"><b>Descr</b></th>
                        <th valign="left"><b>Image</b></th>
             </tr>
         </thead>
@@ -38,7 +37,6 @@
                        <th valign="left"><b>Price</b></th>
                        <th valign="left"><b>Category</b></th>
                        <th valign="left"><b>Update Date</b></th>
-                       <th valign="left"><b>Descr</b></th>
                        <th valign="left"><b>Image</b></th>
             </tr>
         </tfoot>
@@ -95,10 +93,6 @@ $.getJSON('http://localhost:18131/api/v1/query/5208/items?key=a8aa36d2-2a83-4e37
         if ( !isEmpty(data[key].updatedate) ) {
             updatedate = data[key].updatedate;
         }
-        var longdescrption= "";
-        if ( !isEmpty(data[key].longdescrption) ) {
-            longdescrption = data[key].longdescrption;
-        }
         var displayimage= "";
         if ( !isEmpty(data[key].displayimage) ) {
             displayimage = "<a target=\"_new\" href=\"" +
@@ -108,14 +102,16 @@ $.getJSON('http://localhost:18131/api/v1/query/5208/items?key=a8aa36d2-2a83-4e37
 
         t.row.add( [ upc, brandname, item, itemdescription,
                      itemsize, price, category, updatedate,
-                     longdescrption, displayimage ]).draw(true);
+                     displayimage ]).draw(true);
       });
     });
 }); 
 </script>
 <p>
 <br>
-</p><br>
+<img src="https://github.com/tspannhw/FLaNK-Store/blob/main/images/thefuturenificity4.jpg?raw=true">    
+</p>
+<p><br></p><br>
 &copy; 2021-2022-2023 Tim Spann @PaasDev - datainmotion.dev
 <br>           
 </body>

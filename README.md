@@ -72,7 +72,9 @@ FROM FLOWFILE
 
 ````
 
-### FLink SQL
+### Flink SQL
+
+An example of querying Apache Kafka topics with Apache Flink SQL via Schema Registry catalogs.
 
 ````
 select brandname, item, itemdescription, itemsize, price, category, updatedate, longdescrption, displayimage
@@ -88,3 +90,5 @@ from `sr1`.`default_database`.`item`
 * https://developer.kroger.com/documentation/api-products/public/products/tutorial
 * https://github.com/tspannhw/retail-dynamic-shelf-pricing
 * https://github.com/tspannhw/FLaNK-AllTheStreams/tree/main/schemas
+* https://developer.kroger.com/documentation/partner/getting-started/apis
+* https://documenter.getpostman.com/view/4833726/TVReeWJm

@@ -4,6 +4,9 @@ Retail Grocery Store with MiNiFi, NiFi, Kafka, Flink, Kudu, Iceberg, Visualizati
 
 ![FLANK](https://github.com/tspannhw/FLaNK-Store/blob/main/images/thefuturenificity4.jpg)
 
+In today's example, I need to ingest grocery items for some analytics, so let's read these via a secured REST API.    To follow along, you will
+need to sign up for your own free key to see this interesting data.   Who doesn't want to ingest bananas with NiFi.
+
 
 ### We are ingesting data from Kroger
 
@@ -59,6 +62,8 @@ We have a few interesting flows for working with Retail data.   The First
 
 
 ![flink](https://github.com/tspannhw/FLaNK-Store/blob/main/images/flinkjob.jpg)
+
+
 
 
 ### NiFi Calcite SQL - To Transform and Enrich Item Price Stream

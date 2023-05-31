@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Retail - FLaNK Stack with NiFi, Kafka, Flink, Materialize View HTML</title>
+<link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+</head>
+<body bgcolor="white" text="black">
+<div style="font-size: 30; font-weight: bold; font-family: sans-serif;">
+    <p>
+        <strong><b>NiFi/Kafka/Flink - Data Tables - Grocery</b></strong>
+     </p>
+</div>
+<br>
+<table id="grocerytable" class="display" style="width:100%; text-align:left;">
+        <thead>
+            <tr>
+                       <th valign="left"><b>UPC</b></th>
+                       <th valign="left"><b>Brand Name</b></th>
+                       <th valign="left"><b>Item</b></th>
+                       <th valign="left"><b>Description</b></th>
+                       <th valign="left"><b>Size</b></th>
+                       <th valign="left"><b>Price</b></th>
+                       <th valign="left"><b>Category</b></th>
+                       <th valign="left"><b>Update Date</b></th>
+                       <th valign="left"><b>Descr</b></th>
+                       <th valign="left"><b>Image</b></th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                       <th valign="left"><b>UPC</b></th>
+                       <th valign="left"><b>Brand Name</b></th>
+                       <th valign="left"><b>Item</b></th>
+                       <th valign="left"><b>Description</b></th>
+                       <th valign="left"><b>Size</b></th>
+                       <th valign="left"><b>Price</b></th>
+                       <th valign="left"><b>Category</b></th>
+                       <th valign="left"><b>Update Date</b></th>
+                       <th valign="left"><b>Descr</b></th>
+                       <th valign="left"><b>Image</b></th>
+            </tr>
+        </tfoot>
+    </table>
+<script>
+function isEmpty(val){
+    return (val === undefined || val == null || val.length <= 0) ? true : false;
+}
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+$(document).ready(function() {
+    var t = $('#grocerytable').DataTable();
+
+$.getJSON('http://localhost:18131/api/v1/query/5208/items?key=a8aa36d2-2a83-4e37-89fa-11abb8c7410b', 
+    function(data) {
+      $.each( data, function( key, val ) {
+        console.log( data[key].brandname );
+
+        var upc= "";
+        if ( !isEmpty(data[key].upc) ) {
+            upc = data[key].upc;
+        }
+        var brandname= "";
+        if ( !isEmpty(data[key].brandname) ) {
+            brandname = data[key].brandname;
+        }
+        var item= "";
+        if ( !isEmpty(data[key].item) ) {
+            item = data[key].item;
+        }
+        var itemdescription= "";
+        if ( !isEmpty(data[key].itemdescription) ) {
+            itemdescription = data[key].itemdescription;
+        }
+        var itemsize= "";
+        if ( !isEmpty(data[key].itemsize) ) {
+            itemsize = data[key].itemsize;
+        }
+        var price= "";
+        if ( !isEmpty(data[key].price) ) {
+            price = data[key].price;
+        }
+        var category= "";
+        if ( !isEmpty(data[key].category) ) {
+            category = data[key].category;
+        }
+        var updatedate= "";
+        if ( !isEmpty(data[key].updatedate) ) {
+            updatedate = data[key].updatedate;
+        }
+        var longdescrption= "";
+        if ( !isEmpty(data[key].longdescrption) ) {
+            longdescrption = data[key].longdescrption;
+        }
+        var displayimage= "";
+        if ( !isEmpty(data[key].displayimage) ) {
+            displayimage = "<a target=\"_new\" href=\"" +
+             data[key].displayimage + "\"><img border=0 width=40 height=40 src=\"" + 
+             data[key].displayimage + "\"></a>";
+        }
+
+        t.row.add( [ upc, brandname, item, itemdescription,
+                     itemsize, price, category, updatedate,
+                     longdescrption, displayimage ]).draw(true);
+      });
+    });
+}); 
+</script>
+<p>
+<br>
+</p><br>
+&copy; 2021-2022-2023 Tim Spann @PaasDev - datainmotion.dev
+<br>           
+</body>
+</html>

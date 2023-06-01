@@ -7,6 +7,8 @@ Retail Grocery Store with MiNiFi, NiFi, Kafka, Flink, Kudu, Iceberg, Visualizati
 In today's example, I need to ingest grocery items for some analytics, so let's read these via a secured REST API.    To follow along, you will
 need to sign up for your own free key to see this interesting data.   Who doesn't want to ingest bananas with NiFi.
 
+![flank](https://github.com/tspannhw/FLaNK-Store/blob/main/images/groceriesflank.png?raw=true)
+
 
 ### We are ingesting data from Kroger
 
@@ -44,6 +46,8 @@ We have a few interesting flows for working with Retail data.   The First
 ![kafka](https://github.com/tspannhw/FLaNK-Store/blob/main/images/kafkaitemdetail.jpg)
 
 ![smm](https://github.com/tspannhw/FLaNK-Store/blob/main/images/itemanditemimagesmm.jpg)
+
+![smm](https://github.com/tspannhw/FLaNK-Store/blob/main/images/smmitem.jpg?raw=true)
 
 
 ### Apache Kafka Item Image
@@ -92,6 +96,31 @@ from `sr1`.`default_database`.`item`
 
 ![grocery](https://github.com/tspannhw/FLaNK-Store/blob/main/images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg)
 
+I wish to make this data available for Jupyter notebooks and also HTML pages.
+
+So I can create a materialized view in SQL Stream Builder to make my query results available as JSON over REST.
+
+![img](https://github.com/tspannhw/FLaNK-Store/blob/main/images/buildingmaterializedviewendpoint.jpg?raw=true)
+
+![sbb](https://github.com/tspannhw/FLaNK-Store/blob/main/images/materializedviews.jpg?raw=true)
+
+Once I see the results of my query, I am good to go.
+
+![img](https://github.com/tspannhw/FLaNK-Store/blob/main/images/ssbqueryresults.jpg?raw=true)
+
+Let's make sure our materialized view is loaded.
+
+![view](https://github.com/tspannhw/FLaNK-Store/blob/main/images/materializedviewrest.jpg?raw=true)
+
+Let's use DataTables and JQuery to build a dynamic HTML table view.
+
+![view](https://github.com/tspannhw/FLaNK-Store/blob/main/images/groceryhtml2.jpg?raw=true)
+
+![view](https://github.com/tspannhw/FLaNK-Store/blob/main/images/groceryhtml3.jpg?raw=true)
+
+The Final Results
+
+![view](https://github.com/tspannhw/FLaNK-Store/blob/main/images/groceryhtml.jpg?raw=true)
 
 ### References
 
